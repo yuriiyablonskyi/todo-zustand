@@ -15,10 +15,8 @@ const TodoCreator = () => {
       return alert(`You are missing ${5 - lengthValue} characters. Minimum length is 5`)
     }
 
-    const id = Math.random().toString(16).slice(2) + new Date().getTime().toString(36)
-
     const newTask = {
-      id,
+      id: Math.random().toString(16).slice(2) + new Date().getTime().toString(36),
       text: inputValue,
       isDone: false
     }
@@ -28,7 +26,6 @@ const TodoCreator = () => {
 
   return (
     <div className={styles.todoCreator}>
-
       <Input
         placeholder='Write something here...'
         value={inputValue}

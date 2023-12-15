@@ -3,12 +3,12 @@ import styles from './Input.module.sass'
 
 const Input = ({ placeholder, value, onInput, disabled, forwardedRef }) => {
 
-  const childRef = useRef(null)
-  useEffect(() => {
-    if (forwardedRef) {
-      forwardedRef.current = childRef.current
-    }
-  }, [forwardedRef])
+  // const childRef = useRef(null)
+  // useEffect(() => {
+  //   if (forwardedRef) {
+  //     forwardedRef.current = childRef.current
+  //   }
+  // }, [forwardedRef])
 
   return (
     <input
@@ -17,7 +17,8 @@ const Input = ({ placeholder, value, onInput, disabled, forwardedRef }) => {
       value={value}
       onChange={({ target }) => onInput(target.value)}
       disabled={disabled}
-      ref={childRef}
+      onFocus={true}
+      // ref={childRef}
     />
   )
 }
