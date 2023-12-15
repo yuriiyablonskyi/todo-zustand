@@ -1,0 +1,38 @@
+@import './styles/vars'
+@import './styles/mixins'
+
+.App,
+.wrapper
+  margin: 0 auto
+
+.App
+  max-width: 1300px
+  padding: 30px
+  @media (max-width: $mobile)
+    padding: 20px 15px
+
+.wrapper
+  max-width: 730px
+
+.title,
+.name
+  color: $blue
+  font-weight: 700
+
+.title
+  text-align: center
+  font-size: 48px
+  margin-bottom: 30px
+  @media (max-width: $mobile)
+    font-size: 30px
+
+  @media (max-width: $small-mobile)
+    font-size: 22px
+
+.name
+  font-size: 40px
+  @media (max-width: $mobile)
+    font-size: 26px
+
+  @media (max-width: $small-mobile)
+    font-size: 18px

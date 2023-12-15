@@ -1,0 +1,10 @@
+@import './vars'
+
+@mixin border($width, $color, $radius)
+  border: $width solid $color
+  border-radius: $radius
+
+@mixin flex($main-axis, $transverse-axis)
+  display: flex
+  justify-content: $main-axis
+  align-items: $transverse-axis
