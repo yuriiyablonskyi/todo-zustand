@@ -20,6 +20,6 @@ To run the application locally, follow these steps:
 - npm install
 
 2. **Build the project**:
-vite build
+- vite build
 
 3. **Open the application** in your preferred browser.
