@@ -1,8 +1,8 @@
 const todoStore = (set) => ({
   tasks: [
-    { id: 22, text: 'first task', isDone: true },
-    { id: 23, text: 'second task', isDone: true },
-    { id: 24, text: 'third task', isDone: false }
+    { id: 1, text: 'first task', isDone: true },
+    { id: 2, text: 'second task', isDone: true },
+    { id: 3, text: 'third task', isDone: false }
   ],
 
   updateIsDone: (taskId, newDone) =>

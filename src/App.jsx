@@ -7,10 +7,8 @@ const App = () => {
   const { tasks, name } = useBoundStore()
 
   return (
-    
     <div className={styles.App}>
       <h2 className={styles.name}>Hi, {name}</h2>
-      {/* Wrapper создан исключительно для того, чтобы разместить Hi, Alex слева */}
       <div className={styles.wrapper}>
         <h1 className={styles.title}>To do list</h1>
         <TodoCreator />
