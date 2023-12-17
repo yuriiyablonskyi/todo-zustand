@@ -54,7 +54,7 @@
     width: calc(var(--borderWidth) * 3)
     height: var(--borderWidth)
     top: 50%
-    left: 15%
+    left: 17%
     transform-origin: left center
 
   &:before
@@ -92,14 +92,14 @@
   width: 44px
   border-radius: 50%
   background-color: $white
+  @include flex(center, center)
   @media (max-width: $mobile)
     width: 28px
     height: 28px
 
-    svg
-      width: 28px
-      height: 28px
-      display: block
+  svg
+    width: 26px
+    height: 26px
 
 .btnEdit
   margin-right: 10px
