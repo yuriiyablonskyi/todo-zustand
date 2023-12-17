@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import styles from './todoCreator.module.sass'
 import useBoundStore from '../../stores/boundStore'
 import Input from '../input/Input'
