@@ -12,6 +12,7 @@
 ## Tech Stack
 - **React**: The front-end is developed using the React library.
 - **Zustand**: State management is handled by Zustand, providing a lightweight and efficient solution.
+- **Sass**:- Styles are written using Sass for a more structured and maintainable approach.
 
 ## Getting Started
 To run the application locally, follow these steps:
