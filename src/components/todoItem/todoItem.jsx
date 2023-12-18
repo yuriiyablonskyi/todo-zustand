@@ -6,6 +6,7 @@ import useBoundStore from '../../stores/boundStore'
 import Input from '../input/Input'
 import Confirmation from '../confirmation/Confirmation'
 
+// eslint-disable-next-line react/prop-types
 const TodoItem = ({ id, text, isDone }) => {
 
   const { updateIsDone, editTask, deleteTask } = useBoundStore()
