@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { FaRegTrashCan } from "react-icons/fa6"
-import { BsPencil } from "react-icons/bs"
+import { FaRegTrashCan } from 'react-icons/fa6'
+import { BsPencil } from 'react-icons/bs'
 import styles from './todoItem.module.sass'
 import useBoundStore from '../../stores/boundStore'
 import Input from '../input/Input'
@@ -54,7 +54,7 @@ const TodoItem = ({ id, text, isDone }) => {
           </button>
 
           <button className={styles.btnRemove} onClick={() => setShowModal(true)} >
-            <FaRegTrashCan />
+            <FaRegTrashCan  value={{ color: 'red'}}/>
           </button>
         </div>
       </div >
