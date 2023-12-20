@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { FaRegTrashCan } from 'react-icons/fa6'
 import { BsPencil } from 'react-icons/bs'
 import styles from './todoItem.module.sass'
@@ -6,7 +6,6 @@ import useBoundStore from '../../stores/boundStore'
 import Input from '../input/Input'
 import Confirmation from '../confirmation/Confirmation'
 
-// eslint-disable-next-line react/prop-types
 const TodoItem = ({ id, text, isDone }) => {
 
   const { updateIsDone, editTask, deleteTask } = useBoundStore()
@@ -16,6 +15,13 @@ const TodoItem = ({ id, text, isDone }) => {
 
   const itemClass = `${styles.todoItem} ${isDone ? styles.todoItemDone : ''}`
   const btnEdit = `${styles.btnEdit} ${isEditing ? styles.btnEditDone : ''}`
+  const editTitleInputRef = useRef(null)
+
+  useEffect(() => {
+    if (isEditing) {
+      editTitleInputRef?.current?.focus();
+    }
+  }, [isEditing])
 
   const handleEditTask = () => {
     setIsEditing(!isEditing)
@@ -46,6 +52,7 @@ const TodoItem = ({ id, text, isDone }) => {
           value={inputValue}
           onInput={setInputValue}
           disabled={!isEditing}
+          forwardedRef={editTitleInputRef}
         />
 
         <div className={styles.btnWrapper}>
@@ -54,7 +61,7 @@ const TodoItem = ({ id, text, isDone }) => {
           </button>
 
           <button className={styles.btnRemove} onClick={() => setShowModal(true)} >
-            <FaRegTrashCan  value={{ color: 'red'}}/>
+            <FaRegTrashCan value={{ color: 'red' }} />
           </button>
         </div>
       </div >

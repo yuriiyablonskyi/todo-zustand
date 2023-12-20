@@ -1,6 +1,5 @@
 import styles from './Confirmation.module.sass'
 
-// eslint-disable-next-line react/prop-types
 const Confirmation = ({ handleModal }) => (
   <div className={styles.confirmation}>
     <div className={styles.confirmationBox}>
