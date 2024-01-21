@@ -14,6 +14,9 @@
 - **Zustand**: State management is handled by Zustand, providing a lightweight and efficient solution.
 - **Sass**: Styles are written using Sass for a more structured and maintainable approach.
 
+## Live Demo
+You can view the live demo of the project [here](https://yuriiyablonskyi.github.io/todo-zustand/).
+
 ## Getting Started
 To run the application locally, follow these steps:
 
