@@ -1,0 +1,22 @@
+@import '../../styles/vars'
+@import '../../styles/mixins'
+
+.input
+  padding: 9px 18px
+  background-color: $white
+  border-radius: 20px
+  max-width: 500px
+  width: 100%
+  margin-right: 16px
+  outline: none
+  border: 1px solid transparent
+  transition: $transition
+  @media (max-width: $mobile)
+    padding: 5px 8px
+    margin-right: 10px
+
+  &:not([disabled]):focus,
+  &:not([disabled]):active
+    border-color: $blue
+    border-radius: 15px
+    transform: scaleY(1.08) scaleX(1.01)

@@ -1,0 +1,57 @@
+@import '../../styles/vars'
+@import '../../styles/mixins'
+
+.todoCreator
+  padding: 20px 30px
+  background-color: $lavender
+  @include flex(space-between, center)
+  margin-bottom: 16px
+  border-radius: 25px
+  @media (max-width: $mobile)
+    padding: 8px 14px
+
+.btn
+  background-color: $blue
+  border-radius: 20px
+  padding: 6px 12px
+  color: $white
+  @include flex(space-between, center)
+  @media (max-width: $mobile)
+    background-color: transparent
+    padding: 5px 8px
+
+.spanPlus
+  margin-left: 10px
+  font-weight: 400
+  @include flex(center, center)
+  height: 34px
+  width: 34px
+  border-radius: 50%
+  background-color: $white
+  color: $blue
+  font-size: 32px
+  line-height: 1
+  @media (max-width: $mobile)
+    margin-left: 0
+    height: 28px
+    width: 28px
+    font-size: 27px
+
+.spanText
+  @media (max-width: $mobile)
+    display: none
+
+// .Input
+//   padding: 9px 18px
+//   background-color: $white
+//   border-radius: 20px
+//   width: 500px
+//   outline: none
+//   border: 1px solid transparent
+//   transition: $transition
+
+//   &:focus,
+//   &:active
+//     border-color: $blue
+//     border-radius: 10px
+//     transform: scaleY(1.1) scaleX(1.02)

@@ -1,0 +1,49 @@
+@import '../../styles/vars'
+@import '../../styles/mixins'
+
+.confirmation
+  z-index: 150
+  position: fixed
+  top: -100px
+  left: -100px
+  right: -100px
+  bottom: -100px
+  min-height: 100vh
+  @include flex(center, center)
+  border-radius: 50px
+  background: rgba(34,39,47,.3215686275)
+  backdrop-filter: blur(2px)
+  transition: $transition
+
+  &Box
+    margin: 0 auto
+    text-align: center
+    background-color: $lavender
+    border-radius: 20px
+    padding: 25px 35px
+    @media (max-width: $mobile)
+      padding: 12px 20px
+
+.text,
+.btn
+  font-size: 26px
+  color: $white
+  background-color: $blue
+  padding: 15px 25px
+  border-radius: 20px
+  @media (max-width: $mobile)
+    border-radius: 15px
+    padding: 8px 12px
+    font-size: 18px
+
+.text
+  margin-bottom: 8px
+
+.btn
+  transition: $transition
+
+  &:hover
+    background-color: $red
+
+.wrapperBtn
+  @include flex(space-around, center)

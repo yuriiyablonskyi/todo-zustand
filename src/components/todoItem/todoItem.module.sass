@@ -1,0 +1,127 @@
+@import '../../styles/vars'
+@import '../../styles/mixins'
+
+// не работает почему то с sass
+// @media (min-width: 768px)
+//   $borderWidth: 5px
+
+:root
+  --borderWidth: 5px
+
+@media only screen and (max-width: $mobile)
+  :root
+    --borderWidth: 3px
+
+.todoItem
+  padding: 24px
+  margin-bottom: 8px
+  border-radius: 20px
+  background-color: $sky
+  @include flex(space-between, center)
+  transition: $transition
+  @media (max-width: $mobile)
+    padding: 10px 12px
+
+  &Done
+    opacity: 0.6
+    text-decoration: line-through
+
+.label
+  display: block
+
+.input
+  appearance: none
+  vertical-align: middle
+  background: $white
+  border-radius: 50%
+  display: inline-block
+  border: calc(var(--borderWidth) / 1.5) solid $green
+  width: 44px
+  height: 44px
+  margin-right: 16px
+  position: relative
+  cursor: pointer
+  @media (max-width: $mobile)
+    width: 28px
+    height: 28px
+    margin-right: 10px
+
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    background: $green
+    width: calc(var(--borderWidth) * 3)
+    height: var(--borderWidth)
+    top: 50%
+    left: 17%
+    transform-origin: left center
+
+  &:before
+    transform: rotate(45deg) translate(calc(var(--borderWidth) / -2), calc(var(--borderWidth) / -2)) scaleX(0)
+    transition: transform 120ms ease-in 120ms
+
+  &:after
+    width: calc(var(--borderWidth) * 5)
+    transform: rotate(-45deg) translateY(calc(var(--borderWidth) * 2)) scaleX(0)
+    transform-origin: left center
+    transition: transform 120ms ease-in
+
+  &:checked:before
+    transform: rotate(45deg) translate(calc(var(--borderWidth) / -2), calc(var(--borderWidth) / -2)) scaleX(1)
+    transition: transform 120ms ease-in
+
+  &:checked:after
+    width: calc(var(--borderWidth) * 5)
+    transform: rotate(-45deg) translateY(calc(var(--borderWidth) * 2)) scaleX(1)
+    transition: transform 120ms ease-out 120ms
+
+.text
+  padding: 12px 22px
+  background-color: $white
+  border-radius: 20px
+  width: 500px
+  word-wrap: break-word
+
+.btnWrapper
+  display: flex
+
+.btnEdit,
+.btnRemove
+  height: 44px
+  width: 44px
+  border-radius: 50%
+  background-color: $white
+  @include flex(center, center)
+  @media (max-width: $mobile)
+    width: 28px
+    height: 28px
+
+  svg
+    width: 26px
+    height: 26px
+
+    @media (max-width: $mobile)
+      width: 16px
+      height: 16px
+
+.btnEdit
+  margin-right: 10px
+
+  path
+    fill: $purple
+
+  &Done
+    background-color: $purple
+
+    path
+      fill: $white
+
+.btnRemove
+  path
+    fill: $red
+
+.img
+  width: 100%
+  display: block
+  height: auto
