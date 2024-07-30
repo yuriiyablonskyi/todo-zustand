@@ -23,7 +23,9 @@ To run the application locally, follow these steps:
 1. **Install dependencies**:
 - npm install
 
-2. **Build the project**:
-- vite build
-
+2. **Start the project**:
+- npm run dev
+or
+- npm run build
+- npm run preview
 3. **Open the application** in your preferred browser.
