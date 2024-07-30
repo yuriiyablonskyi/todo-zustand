@@ -17,15 +17,23 @@
 ## Live Demo
 You can view the live demo of the project [here](https://yuriiyablonskyi.github.io/todo-zustand/).
 
-## Getting Started
+## 🚀 Getting Started
+
 To run the application locally, follow these steps:
 
-1. **Install dependencies**:
-- npm install
+1. **📦 Install dependencies**:
+    ```sh
+    npm install
+    ```
 
-2. **Start the project**:
-- npm run dev
-or
-- npm run build
-- npm run preview
-3. **Open the application** in your preferred browser.
+2. **▶️ Start the project**:
+    ```sh
+    npm run dev
+    ```
+    or
+    ```sh
+    npm run build
+    npm run preview
+    ```
+
+3. **🌐 Open the application** in your preferred browser.
