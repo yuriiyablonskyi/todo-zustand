@@ -16,7 +16,7 @@ This project is deployed on [GitHub Pages](https://yuriiyablonskyi.github.io/tod
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/yuriiyablonskyi/todo-zustand
+   git clone https://github.com/yuriiyablonskyi/todo-zustandjg.kuuog
    ```
 
 1. **Navigate to the project directory**:
