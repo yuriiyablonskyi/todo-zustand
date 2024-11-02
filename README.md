@@ -38,3 +38,9 @@ This project is deployed on [GitHub Pages](https://yuriiyablonskyi.github.io/tod
    ```
 
 1. Access the application in your browser
+
+## Deployment Information
+
+- **GitHub Pages** is enabled in the repository settings to host the project.
+- A **custom domain** `todo-zustand.yuriiyablonskyi.tech` is configured to point to the GitHub Pages site.
+- The deployment is automated using **GitHub Actions**, which ensures that any changes pushed to the repository are automatically built and deployed.
